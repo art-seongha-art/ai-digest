@@ -1,29 +1,29 @@
 # Paper Agent — 2026-03-06
 
-## InfinityStory: 세계 일관성 및 캐릭터 인지 샷 전환을 갖춘 무제한 비디오 생성
-*InfinityStory: Unlimited Video Generation with World Consistency and Character-Aware Shot Transitions*
+## 도시 복사 필드
+*Urban Radiance Fields*
 
-**저자**: Mohamed Elmoghany; Liangbing Zhao; Xiaoqian Shen; Subhojyoti Mukherjee; Yang Zhou 외 | **출처**: huggingface
+**저자**: Konstantinos Rematas; Andrew Liu; Pratul P. Srinivasan; Jonathan T. Barron; Andrea Tagliasacchi; Thomas Funkhouser; Vittorio Ferrari | **연도**: 2021 | **출처**: arxiv
 
 ### 추천 이유
 
-스코어 기반 선정 (관련도: 0.71, 키워드: 0.00, LLM: 1.00)
+스코어 기반 선정 (관련도: 0.73, 키워드: 0.08, LLM: 1.00)
 
 ### 요약
 
-문제: 장편 스토리텔링 비디오 생성 시 배경 일관성, 다중 피사체 샷 간 전환의 매끄러움, 그리고 시간 단위 길이로의 확장이 주요 난제이다.
-방법: InfinityStory는 배경 일관성을 유지하는 생성 파이프라인과 다중 피사체 진입/퇴장을 처리하는 전환 인식 비디오 합성 모듈을 제안하며, 10,000개의 다중 피사체 전환 시퀀스를 포함하는 합성 데이터셋을 구축했다.
-결과: VBench에서 InfinityStory는 Background Consistency 88.94, Subject Consistency 82.11로 최고 점수를 달성했으며, 전체 평균 순위 2.80으로 향상된 안정성과 부드러운 전환을 입증했다.
-키워드: Video Generation, World Consistency, Shot Transitions, Multi-subject, VBench
+- 문제: 기존 Neural Radiance Fields(NeRF)가 통제된 소규모 환경에 적합했던 한계를 넘어, Street View와 같은 도시 야외 환경의 대규모 RGB 이미지 및 lidar 데이터에서 3D 재구성 및 새로운 시점 합성을 수행하는 것이 목표이다.
+- 방법: Neural Radiance Fields(NeRF)를 확장하여, 비동기식으로 획득된 lidar 데이터를 활용하고, 이미지 간 노출 변화를 처리하며, 예측된 이미지 분할을 통해 하늘 방향 광선의 밀도를 감독하는 세 가지 새로운 기법을 제안한다.
+- 결과: 제안된 세 가지 확장 기법 각각이 Street View 데이터 실험에서 상당한 성능 향상을 제공하며, COLMAP 및 Mip-NeRF 대비 최첨단 3D 표면 재구성 및 더 높은 품질의 새로운 시점 합성을 달성한다.
+- 키워드: Neural Radiance Fields, 3D reconstruction, Novel view synthesis, Lidar, Urban environments
 
 ### 초록 (한국어)
 
-일관된 시각적 내러티브를 가진 장편 스토리텔링 비디오를 생성하는 것은 비디오 합성(video synthesis) 분야에서 여전히 중대한 과제로 남아 있습니다. 본 논문에서는 샷(shot) 간 배경 일관성, 다중 피사체(multi-subject) 샷 간(shot-to-shot) 매끄러운 전환, 그리고 시간 단위 내러티브로의 확장성(scalability)이라는 세 가지 핵심적인 한계점을 해결하는 새로운 프레임워크, 데이터셋, 모델을 제시합니다. 우리의 접근 방식은 캐릭터 정체성과 공간 관계를 보존하면서 장면 전반에 걸쳐 시각적 일관성을 유지하는 배경 일관성 생성 파이프라인을 도입합니다. 또한, 다중 피사체가 프레임에 진입하거나 이탈하는 복잡한 시나리오를 위한 매끄러운 샷 전환을 생성하여 이전 연구의 단일 피사체(single-subject) 한계를 뛰어넘는 전환 인식 비디오 합성 모듈을 제안합니다. 이를 지원하기 위해, 충분히 다뤄지지 않았던 동적 장면 구성을 포함하는 10,000개의 다중 피사체 전환 시퀀스로 구성된 합성 데이터셋을 기여합니다. VBench에서 InfinityStory는 가장 높은 배경 일관성(Background Consistency)(88.94), 가장 높은 피사체 일관성(Subject Consistency)(82.11), 그리고 최고의 전체 평균 순위(2.80)를 달성하여 향상된 안정성, 더 매끄러운 전환, 더 나은 시간적 일관성(temporal coherence)을 보여줍니다.
+본 연구의 목표는 도시 야외 환경에서 세계 매핑(world mapping)을 위해 일반적으로 배포되는 스캐닝 플랫폼(scanning platform)(예: Street View)으로 캡처된 데이터로부터 3D 재구성(3D reconstruction) 및 새로운 시점 합성(novel view synthesis)을 수행하는 것이다. 야외 장면을 이동하는 카메라와 스캐너에 의해 획득된 포즈가 있는(posed) RGB 이미지 시퀀스(sequence) 및 라이다 스윕(lidar sweep)이 주어지면, 우리는 3D 표면(3D surface)을 추출하고 새로운 RGB 이미지를 합성할 수 있는 모델을 생성한다. 우리의 접근 방식은 통제된 환경의 작은 장면에서 사실적인 새로운 이미지를 합성하는 것으로 입증된 신경 방사 필드(Neural Radiance Fields)를 확장하며, 비동기적으로 캡처된 라이다 데이터를 활용하고, 캡처된 이미지 간의 노출 변화(exposure variation)를 처리하며, 하늘을 향하는 광선(ray)의 밀도(density)를 감독하기 위해 예측된 이미지 분할(image segmentation)을 활용하는 새로운 방법들을 포함한다. 이 세 가지 확장 각각은 Street View 데이터에 대한 실험에서 상당한 성능 향상을 제공한다. 우리 시스템은 기존 방법(예: COLMAP)과 최신 신경 표현(neural representation)(예: Mip-NeRF) 모두와 비교하여 최첨단 3D 표면 재구성(3D surface reconstruction)을 생성하고 더 높은 품질의 새로운 시점을 합성한다.
 
 ### 링크
 
-- 원문: https://huggingface.co/papers/2603.03646
-- 캡처: `archive/2026-03-06/captures/huggingface_2603.03646.html`
+- 원문: http://arxiv.org/abs/2111.14643v1
+- PDF: `archive/2026-03-06/pdfs/arxiv_2111.14643v1.pdf`
 
 ---
 
@@ -31,29 +31,29 @@
 
 ## 📌 오늘의 이슈
 
-오늘 AI와 실감미디어 분야에서는 기술의 사회적 영향과 활용 방안에 대한 논의가 활발했어요. 특히 AI 에이전트의 실용적인 적용과 그에 따른 윤리적, 기술적 과제들이 주목받았네요.
+안녕하세요! 오늘 AI와 실감미디어 세상에서는 'AI 에이전트'의 실용성과 '실감미디어'의 대중화를 향한 구체적인 움직임이 돋보이는 하루였어요. 개발자 커뮤니티에서는 AI가 사람처럼 웹 브라우저를 정교하게 다룰 수 있게 하는 새로운 오픈소스 기술이 등장해서 화제가 되었고요, 누구나 무료 도구로 자신만의 'AI 인력'을 구축하는 방법이 공유되기도 했네요. 이제 AI 에이전트가 막연한 개념을 넘어, 실제 업무를 자동화하는 구체적인 도구로 자리 잡고 있다는 신호 같아요.
 
-국내에서는 AI와 실감미디어를 접목한 새로운 공간 조성과 인재 양성 노력이 이어지고 있어요. **닷밀**이 강화도에 실감미디어 복합문화공간을 추진하고, **홍익대학교**에서는 **AI·실감미디어콘텐츠학** 석박사 과정 신입생을 모집하는 등 미래를 위한 투자가 활발하답니다.
+국내에서는 실감미디어 기술이 우리 일상과 더 가까워지는 소식들이 들려왔어요. 디지털 디자인 기업 **닷밀**이 강화도에 AI 기술을 결합한 대규모 '실감미디어 복합문화공간'을 만든다고 발표했거든요. 단순한 전시를 넘어, 온 가족이 즐길 수 있는 거대한 테마파크처럼 만들어진다고 하니 정말 기대되네요.
 
-한편, AI 기술을 활용한 창작 활동과 더불어, AI 모델의 오용 가능성에 대한 경고도 있었어요. **BBC** 기자가 **ChatGPT**와 **Google AI**를 **SEO 해킹**한 사례는 AI의 잠재적 위험성을 다시 한번 상기시켜주었네요.
+이런 산업계의 열기는 학계에서도 이어졌는데요, **중앙대학교**에서는 실감미디어 국제 컨퍼런스를 성공적으로 마치며 AI와 융합된 미래를 논의했다고 해요. 이처럼 오늘은 오픈소스 기술부터 대규모 상업 프로젝트, 학술적 논의에 이르기까지, AI와 실감미디어가 한 단계 더 도약하는 모습을 엿볼 수 있는 날이었습니다.
 
 ## 🌐 글로벌 AI
 
-AI 기술의 윤리적 사용과 잠재적 오용 가능성에 대한 논의가 이어졌다. **BBC** 기자가 **ChatGPT**와 **Google AI**를 **SEO 해킹**하는 데 성공하며, AI 모델의 취약점과 악용 가능성이 부각되었다. 이는 AI 서비스 제공자들이 보안 강화에 더욱 힘써야 함을 시사한다. 또한, AI를 활용한 소프트웨어 개발 및 라이선싱 문제도 제기되었다. AI가 작성한 코드의 저작권 및 라이선스 재설정 문제에 대한 논의는 AI가 소프트웨어 산업 전반에 미치는 영향을 보여준다.
+오픈소스 AI 에이전트용 브라우저 제어 프로토콜 등장. **'agent-browser-protocol'** 이라는 새로운 오픈소스 프로젝트가 공개되었다. 이는 AI 에이전트가 웹 브라우저를 결정론적(deterministic)으로 제어할 수 있도록 설계된 프로토콜이다. 기존의 접근 방식(컴퓨터 비전, 접근성 API 활용 등)이 가진 불안정성과 비일관성 문제를 해결하는 것을 목표로 한다. **Mind2Web** 벤치마크에서 약 90%의 높은 성공률을 보여, 더 안정적이고 신뢰성 높은 웹 자동화 AI 에이전트 개발의 가능성을 열었다는 점에서 중요하다.
 
-🔗 [BBC Journalist SEO-Hacks ChatGPT and Google's AI](https://www.bbc.com/future/article/20260218-i-hacked-chatgpt-and-googles-ai-and-it-only-took-20-minutes)
+🔗 [Show HN: Deterministic browser control for AI agents (~90% on Mind2Web)](https://github.com/theredsix/agent-browser-protocol)
 
 ## 🏛️ 국내정책
 
-AI 시대에 발맞춰 국내 교육 및 공공기관의 변화 노력이 두드러졌다. 대학 도서관이 AI 기술을 접목하여 단순한 열람 공간을 넘어선 **복합문화공간**으로 재정의되고 있다. 이는 AI가 교육 환경과 학습 경험을 혁신하는 중요한 도구로 인식되고 있음을 보여준다. 또한, 미래 실감미디어 산업을 이끌 인재 양성을 위한 움직임도 활발하다. **홍익대학교**는 **AI·실감미디어콘텐츠학** 2026학년도 전기 석·박사과정 신입생을 모집하며, 전문 인력 확보의 중요성을 강조하였다.
+중앙대학교, AI 융합 실감미디어 국제 컨퍼런스 개최. **중앙대학교** 첨단영상대학원이 '실감미디어 국제 컨퍼런스 2026'을 성공적으로 개최하였다. 이번 컨퍼런스는 AI 기술과 실감미디어의 융합을 핵심 주제로 다루며, 관련 분야의 미래 발전 방향을 모색하는 자리였다. 이는 국내 학계가 AI와 XR 기술의 결합을 중요한 연구 의제로 인식하고, 글로벌 기술 트렌드를 선도하기 위한 학술적 기반을 다지고 있음을 보여준다.
 
-🔗 ['차은우 동생', 닷밀과 강화도에 AI 결합 차세대 실감미디어 복합문화공간 조성 - 아시아경제](https://news.google.com/rss/articles/CBMiYEFVX3lxTFAxdHN3bExzNFM3OTBWVFZxblRFclc3RFhKSVdrZFliRHlWb0RVZmpOSlZfMHU1cG5lSEVYN2pNbE5KUzBLU2IzeWl3cU1FLVhZX25QNmJOMHZySG44alJ1WQ?oc=5)
+🔗 [중앙대, 실감미디어 국제 컨퍼런스 2026 성료…AI 융합 미래 제시](https://news.google.com/rss/articles/CBMia0FVX3lxTFBNNzdTR0FrdmlWa0NTZ1lYZklYczFibmlmRlVrZGNQZXprT3lEMVZyM3hoM3duWEIxZGFDTXNzN1pObWhPWUhMbjUtOEtIby1uNUNDQ01jMjd4Y29pbGo0NkV0eHZCVkY1dTVF?oc=5)
 
 ## 🏭 산업계
 
-AI 에이전트 기술을 활용한 스타트업의 등장이 주목받았다. **Vela**는 복잡한 스케줄링을 위한 AI 솔루션을 출시하며, AI가 일상 및 비즈니스 프로세스 자동화에 기여할 잠재력을 보여주었다. 실감미디어 분야에서는 **닷밀**이 강화도에 AI를 결합한 차세대 **실감미디어 복합문화공간**을 조성할 계획을 발표하였다. 이는 지역 관광 활성화와 함께 immersive media 기술의 상업적 활용 가능성을 확장하는 사례이다. 한편, **Ray-Ban Meta Smart Glasses**와 같은 스마트 기기의 확산과 함께 사용자 프라이버시 침해 우려도 제기되었다. 웨어러블 기기가 일상에 깊숙이 들어오면서 개인 정보 보호에 대한 사회적 논의가 더욱 중요해지고 있다.
+닷밀, 강화도에 AI 결합 실감미디어 복합문화공간 조성. 디지털 미디어 콘텐츠 기업 **닷밀**이 강화도에 AI 기술을 접목한 차세대 실감미디어 복합문화공간을 조성한다고 발표했다. 이는 단순한 미디어아트 전시를 넘어, 대규모 공간 전체를 활용한 몰입형 엔터테인먼트 시설을 구축하는 프로젝트이다. 이 사업은 실감미디어 기술이 특정 마니아층을 넘어 대중적인 문화·관광 산업의 핵심 요소로 자리 잡고 있음을 보여주는 중요한 사례이다.
 
-🔗 [Launch HN: Vela (YC W26) – AI for complex scheduling](https://news.ycombinator.com/item?id=47264741)
+🔗 ['차은우 동생', 닷밀과 강화도에 AI 결합 차세대 실감미디어 복합문화공간 조성 - 아시아경제](https://news.google.com/rss/articles/CBMiYEFVX3lxTFAxdHN3bExzNFM3OTBWVFZxblRFclc3RFhKSVdrZFliRHlWb0RVZmpOSlZfMHU1cG5lSEVYN2pNbE5KUzBLU2IzeWl3cU1FLVhZX25QNmJOMHZySG44alJ1WQ?oc=5)
 
 ## 🔬 연구동향
 
@@ -61,44 +61,40 @@ AI 에이전트 기술을 활용한 스타트업의 등장이 주목받았다. *
 
 ## 💬 커뮤니티
 
-AI 에이전트의 실제 적용에 대한 기술 커뮤니티의 고민이 활발했다. **Hacker News**에서는 AI 코딩 에이전트가 기존 코드베이스 표준과 어떻게 정렬될 수 있는지에 대한 질문이 제기되며, AI 개발 도구의 실용적 통합에 대한 관심이 높음을 보여주었다. 또한, 일반 대중 사이에서 **LLM**에 대한 오해와 정확한 정보 전달의 중요성이 논의되었다. **Reddit**에서는 신경과학자가 **LLM**에 대해 잘못된 정보를 전달했다는 주장이 제기되며, AI 기술에 대한 대중의 이해도를 높이는 것이 중요함을 시사했다.
+무료 도구로 'AI 에이전트 인력' 구축 가이드 공유. 레딧(Reddit) 커뮤니티에 무료 오픈소스 도구와 저장소(repository)만을 활용하여 자신만의 'AI 에이전트 인력(Agentic AI Workforce)'을 구축하는 종합 가이드가 공유되어 주목받았다. 이 가이드는 특정 상용 서비스에 의존하지 않고도 자율적인 AI 시스템을 만들 수 있는 방법을 제시한다. 이는 AI 에이전트 기술의 민주화와 개인화 트렌드를 반영하며, 개발자 커뮤니티 내에서 자율 에이전트 구축에 대한 관심이 매우 높다는 것을 보여준다.
 
-🔗 [Ask HN: How do you keep AI coding agents aligned with your codebase standards?](https://news.ycombinator.com/item?id=47266783)
+🔗 [The Ultimate 2026 Guide: Build Your Own "Agentic AI" Workforce for $0 (Free Tools & Repos)](https://www.reddit.com/r/u_External-Initial1569/comments/1rmivdj/the_ultimate_2026_guide_build_your_own_agentic_ai/)
 
 ## 🎨 생성형AI
 
-웹 애플리케이션 내에서 작동하는 GUI 에이전트 **PageAgent**가 **Alibaba**에 의해 공개되었다. 이 에이전트는 웹 앱 내부에서 사용자 인터페이스를 통해 상호작용하며 작업을 자동화할 수 있어, AI 에이전트의 활용 범위를 넓히는 데 기여한다. AI와 예술의 융합을 보여주는 전시회도 개최되었다. 제3회 ‘행간애’ 전시회에서는 'Hyper X Flow'라는 주제로 **생성형 AI**를 활용한 예술 작품들이 선보여지며, AI가 창작 활동에 미치는 영향과 새로운 예술적 표현 가능성을 제시하였다.
-
-🔗 [Show HN: PageAgent, A GUI agent that lives inside your web app](https://alibaba.github.io/page-agent/)
+해당 없음
 
 ## 📢 공모지원
 
--   **2026년 민관협력 기반 AI 휴머노이드 원천기술 고도화(R&D) 신규과제 재공고**: AI 휴머노이드 기술 개발을 목표로 하며, 2026년 3월 25일까지 접수한다.
--   **2026년도 AI+S&T 혁신 기술개발(R&D) 신규과제 재공모**: AI와 과학기술 융합 혁신 기술 개발을 지원하며, 2026년 3월 25일까지 접수한다.
--   **「2026년 기업 데이터 연계ㆍ활용 지원사업」 공고**: 기업의 데이터 활용 역량 강화를 위한 지원 사업으로, 2026년 3월 25일까지 신청 가능하다.
--   **2026년도 대학정보보호동아리(KUCIS) 지원사업 참여동아리 모집**: 대학생들의 정보보호 역량 강화를 위한 동아리 지원 사업으로, 2026년 3월 25일까지 접수한다.
+- **[2026년도 AI+S&T 혁신 기술개발(R&D) 신규과제 재공모](https://www.msit.go.kr/bbs/view.do?sCode=user&mId=311&mPid=121&bbsSeqNo=100&nttSeqNo=3186548)**: 과학기술정보통신부 주관, AI 기술을 과학기술 분야에 접목하는 혁신 R&D 과제 공모.
+- **[2026년도 한미 전략기술 선행표준화 공동연구사업(美 NIST 협력사업) 신규과제 공모](https://www.msit.go.kr/bbs/view.do?sCode=user&mId=311&mPid=121&bbsSeqNo=100&nttSeqNo=3186550)**: 과학기술정보통신부 주관, AI, 양자 등 전략기술 분야의 국제 표준화를 위한 한미 공동연구 지원.
+- **[2026년도 미래개척융합과학기술개발사업 신규과제 제1차 공모](https://www.msit.go.kr/bbs/view.do?sCode=user&mId=311&mPid=121&bbsSeqNo=100&nttSeqNo=3186552)**: 과학기술정보통신부 주관, 미래 유망 융합기술 분야의 선도적 연구개발 지원.
+- **[2026년도 미래개척융합과학기술개발사업 신규과제 제2차 공모](https://www.msit.go.kr/bbs/view.do?sCode=user&mId=311&mPid=121&bbsSeqNo=100&nttSeqNo=3186549)**: 과학기술정보통신부 주관, 미래 유망 융합기술 분야의 선도적 연구개발 지원.
 
 ## 🔑 오늘의 키워드
 
-**AI 에이전트**: 특정 목표 달성을 위해 자율적으로 환경과 상호작용하고 의사결정을 내리는 AI 시스템이다. 복잡한 스케줄링이나 웹 앱 내 GUI 조작 등 다양한 분야에서 활용 가능성이 모색되고 있다.
+**AI 에이전트 (AI Agent)**: 목표 달성을 위해 환경을 인식하고, 자율적으로 판단하여 행동하는 AI 시스템이다. 최근 LLM의 발전으로 인간의 언어 지시를 이해하고 복잡한 다단계 작업을 수행하는 능력이 향상되면서, 웹 자동화, 소프트웨어 엔지니어링 등 실용적인 분야에서 주목받고 있다.
 
-**실감미디어 복합문화공간**: AI, XR 등 실감미디어 기술을 활용하여 몰입감 있는 경험을 제공하는 문화 공간이다. 교육, 관광, 예술 등 다양한 분야에서 새로운 형태의 사용자 경험을 창출하고 있다.
+**실감미디어 (Immersive Media)**: 사용자가 가상 환경에 몰입하여 실제와 유사한 경험을 할 수 있도록 하는 기술로, VR(가상현실), AR(증강현실), MR(혼합현실) 등을 포괄한다. AI 기술과 결합하여 더욱 지능적이고 상호작용적인 콘텐츠 제작이 가능해지면서 엔터테인먼트, 교육, 관광 등 다양한 산업으로 확산되고 있다.
 
-**SEO 해킹**: 검색 엔진 최적화(SEO) 기술을 악용하여 특정 콘텐츠나 정보를 검색 결과 상단에 부당하게 노출시키는 행위이다. AI 모델이 이러한 해킹에 취약할 수 있음이 드러나며 윤리적 사용의 중요성이 강조되었다.
-
-**PageAgent**: 웹 애플리케이션의 GUI(그래픽 사용자 인터페이스) 내에서 직접 작동하며 사용자의 작업을 자동화하는 AI 에이전트 프레임워크이다. 웹 기반 작업의 효율성을 높이는 데 기여할 수 있다.
+**결정론적 제어 (Deterministic Control)**: 동일한 입력과 조건 하에서 항상 동일한 결과를 출력하는 제어 방식이다. AI 에이전트가 웹 브라우저를 제어할 때, 화면의 시각적 요소에 의존하는 비결정론적 방식과 달리 DOM 구조 등 명확한 정보를 기반으로 하여 작업의 신뢰성과 재현성을 크게 높일 수 있다.
 
 ---
 
 <details>
 <summary>실행 정보</summary>
 
-- 실행 시각: 2026-03-06T01:55:05.326000+00:00
+- 실행 시각: 2026-03-06T17:13:09.147264+00:00
 - Provider: gemini
 - Model: gemini-2.5-flash
-- 검색 결과: 156건
-- 신규 후보: 153건
+- 검색 결과: 201건
+- 신규 후보: 196건
 - pending 추가: 1건
-- PDF 저장: 실패 (캡처로 대체)
+- PDF 저장: 성공
 
 </details>
