@@ -1,40 +1,38 @@
 # Paper Agent — 2026-03-06
 
-## 큐브컴포저: 원근 영상으로부터 시공간 자기회귀 4K 360도 영상 생성
-*CubeComposer: Spatio-Temporal Autoregressive 4K 360° Video Generation from Perspective Video*
+## 당신의 공간 컴퓨팅 및 인공지능 로드맵: 전략부터 구현까지, 그리고 그 너머
+*Your Spatial Computing and
+            <scp>AI</scp>
+            Roadmap: From Strategy to Implementation and Beyond*
 
-**저자**: Lingen Li; Guangzhi Wang; Xiaoyu Li; Zhaoyang Zhang; Qi Dou 외 | **출처**: huggingface
+**연도**: 2024 | **출처**: crossref | **DOI**: 10.1002/9781394308538.ch8
 
 ### 추천 이유
 
-스코어 기반 선정 (관련도: 0.71, 키워드: 0.00, LLM: 1.00)
+스코어 기반 선정 (관련도: 0.71, 키워드: 0.04, LLM: 1.00)
 
 ### 요약
 
-- 문제: 기존 확산 모델은 360° 파노라마 비디오 생성 시 ≤1K 해상도에 그치며, 고해상도(예: 4K) 출력을 위해 비최적적인 후처리 방식에 의존하는 한계가 있습니다.
-- 방법: CubeComposer는 360° 비디오를 6면의 Cubemap으로 분해하고, 이를 시공간적으로 Autoregressive하게 합성하여 4K 해상도 비디오를 네이티브로 생성하는 Diffusion Model입니다. 효율적인 합성을 위해 시공간 Autoregressive 전략, Sparse Context Attention 기반의 Context 관리, 그리고 경계면 이음새 제거를 위한 Continuity-aware 기법을 사용합니다.
-- 결과: CubeComposer는 4K 해상도 360° 비디오를 네이티브로 생성하며, 기존 최신 기법들보다 해상도와 시각적 품질 면에서 우수한 성능을 보여줍니다.
-- 키워드: 360° Video Generation, Spatio-Temporal Autoregressive, Diffusion Model, Cubemap, 4K resolution
-
-### 초록 (한국어)
-
-고품질 360° 파노라마 비디오를 원근 입력(perspective input)으로부터 생성하는 것은 가상 현실(VR)의 중요한 응용 분야 중 하나이며, 몰입형 경험(immersive experience)을 위해서는 고해상도 비디오가 특히 중요하다. 기존 방법들은 바닐라 확산 모델(vanilla diffusion models)의 계산적 한계에 제약을 받아, 1K 해상도 이하의 원본 생성(native generation)만을 지원하며, 해상도 향상을 위해 최적화되지 않은 후처리 초해상도(post super-resolution)에 의존한다. 본 논문은 4K 해상도 360° 비디오를 원본으로 생성하는 새로운 시공간 자기회귀 확산 모델(spatio-temporal autoregressive diffusion model)인 CubeComposer를 소개한다. CubeComposer는 비디오를 여섯 개의 면을 가진 큐브맵 표현(cubemap representations)으로 분해함으로써, 잘 계획된 시공간 순서로 콘텐츠를 자기회귀적으로 합성하여 메모리 요구량을 줄이면서 고해상도 출력을 가능하게 한다. 특히, 다차원 자기회귀(multi-dimensional autoregression)의 과제를 해결하기 위해 다음을 제안한다: (1) 일관된 합성을 위해 큐브 면(cube faces)과 시간 창(time windows)에 걸쳐 360° 비디오 생성을 조율하는 시공간 자기회귀 전략(spatio-temporal autoregressive strategy); (2) 효율성 향상을 위해 희소 컨텍스트 어텐션(sparse context attention) 설계를 갖춘 큐브 면 컨텍스트 관리 메커니즘(cube face context management mechanism); 그리고 (3) 경계 이음새(boundary seams)를 제거하기 위한 큐브 인식 위치 인코딩(cube-aware positional encoding), 패딩(padding), 블렌딩(blending)을 포함하는 연속성 인식 기술(continuity-aware techniques). 벤치마크 데이터셋(benchmark datasets)에 대한 광범위한 실험은 CubeComposer가 원본 해상도와 시각적 품질(visual quality) 면에서 최신 기술(state-of-the-art methods)을 능가하며, 실용적인 VR 응용 시나리오를 지원함을 입증한다. 프로젝트 페이지: https://lg-li.github.io/project/cubecomposer
+문제: 기업들이 Spatial Computing 및 AI 기술을 전략적으로 기획하고 실제 운영에 통합하는 과정에서 겪는 복잡성과 명확한 지침의 부재.
+방법: 전략 수립부터 구현, 그리고 미래 확장까지의 전 과정을 아우르는 포괄적인 로드맵을 제시하여, 조직이 Spatial Computing 및 AI 역량을 체계적으로 구축하도록 안내.
+결과: 이 로드맵은 전략, 구현, 미래 확장이라는 3가지 핵심 단계를 명확히 제시함으로써, 기업이 Spatial Computing 및 AI 도입의 성공률을 높이는 데 실질적인 프레임워크를 제공.
+키워드: Spatial Computing, AI, Roadmap, Strategy, Implementation
 
 ### 링크
 
-- 원문: https://huggingface.co/papers/2603.04291
-- 캡처: `archive/2026-03-06/captures/huggingface_2603.04291.html`
+- 원문: https://doi.org/10.1002/9781394308538.ch8
+- 캡처: `archive/2026-03-06/captures/doi_10.1002_9781394308538.ch8.html`
 
 ---
 
 <details>
 <summary>실행 정보</summary>
 
-- 실행 시각: 2026-03-06T01:43:52.206219+00:00
+- 실행 시각: 2026-03-06T01:48:43.904536+00:00
 - Provider: gemini
 - Model: gemini-2.5-flash
-- 검색 결과: 157건
-- 신규 후보: 156건
+- 검색 결과: 156건
+- 신규 후보: 154건
 - pending 추가: 1건
 - PDF 저장: 실패 (캡처로 대체)
 
