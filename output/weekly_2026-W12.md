@@ -1,201 +1,100 @@
-# 주간 AI 리서치 다이제스트 — 2026-W12 (3/16~3/22)
+# Weekly Digest — 2026-W12 (3/16~3/22)
 
-> 박성하님을 위한 이번 주 연구·임용·지원사업 종합 리포트
-> 생성: 2026-03-22 13:06
+## How Well Can 3D Accessibility Guidelines Support XR Development? An Interview Study with XR Practitioners in Industry
+*How Well Can 3D Accessibility Guidelines Support XR Development? An Interview Study with XR Practitioners in Industry*
 
----
+**저자**: Daniel Killough; Tiger F. Ji; Kexin Zhang; Yaxin Hu; Yu Huang; Ruofei Du; Yuhang Zhao | **출처**: arxiv
 
-## Executive Summary
+### 추천 이유
 
-박성하 박사과정님께,
+이번 주 수집된 125편 중 LLM 관련도 평가로 선정 (composite: 0.00)
 
-이번 주 AI·실감미디어·예술 분야 동향은 박사님의 연구 방향과 밀접하게 연결되는 흥미로운 지점들을 다수 보여주었습니다. 특히, 'Developing Creative AI to Generate Sculptural Objects'를 포함한 여러 논문들은 AI 기반의 3D 환경 및 조형물 생성에 대한 연구가 활발함을 시사하며, 이는 DeepSDF 3D 생성 및 LoRA 기반 조형 연구에 직접적인 영감을 줄 수 있습니다. 또한, 'Federated Sketching LoRA'와 같은 LLM 미세조정 관련 연구들은 LoRA 기술의 확장 가능성을 보여주며, 박사님의 조형 연구에 접목될 잠재력을 내포하고 있습니다.
+### 요약
 
-커뮤니티 시그널에서는 AI 에이전트의 실용적 활용 사례가 증가하고 있음을 보여주며, 이는 미디어아트 창작 과정의 자동화 및 새로운 인터랙션 가능성을 제시합니다. 동시에, 정보통신산업진흥원과 과학기술정보통신부에서 '생성형 AI 기반 가상융합 콘텐츠 제작 전문인력 양성' 교육 운영기관을 모집하는 등 생성형 AI와 실감미디어 분야의 인력 양성 및 생태계 구축에 대한 정부 차원의 지원이 매우 활발합니다. 대구 수성미래교육재단의 3D 착시 미술·미디어 아트 교육 지원, 수원시미디어센터의 AI 미디어아트 영상 제작 지원 공모, 그리고 한국게임학회·넥슨의 디지털아트 공모전(AI 작품 가능) 등은 AI 아트 및 미디어아트 분야의 창작 및 교육 기회가 풍부함을 방증합니다. 임용 공고 중 서울대학교 디자인학부 전임교원 채용은 AI·실감미디어콘텐츠 분야의 학문적 위상과 수요를 보여주는 중요한 지표입니다.
+다음은 논문의 요약입니다.
 
-**이번 주 주목할 점은** AI가 단순한 도구를 넘어 창의적 조형물 및 3D 환경 생성의 핵심 주체로 부상하고 있으며, LoRA와 같은 미세조정 기술이 다양한 예술 분야로 확장될 잠재력을 가진다는 것입니다. 또한, 생성형 AI와 실감미디어 분야의 인재 양성 및 예술 창작 지원이 국가적, 지역적으로 활발히 이루어지고 있습니다.
+-   **문제:** 기존 3D 게임 및 가상 세계의 접근성(a11y) 지침이 XR(확장 현실)의 고유한 상호작용 패러다임에 얼마나 잘 적용될 수 있는지 불분명하며, XR 개발자들은 실제 제약 조건 하에서 접근성 지침을 구현하기 위한 실질적인 지침이 부족하다.
+-   **방법:** 본 연구는 다양한 조직 환경의 XR 개발자 25명과의 반구조화된 인터뷰를 통해 기존 3D 접근성 지침이 XR 개발에 적용되는 방식을 최초로 평가했다. 시각, 운동, 인지, 언어, 청각 영역에 걸쳐 6가지 주요 자료에서 합의된 20가지 접근성 지침을 평가하고, 개발자들의 개발 관행과 XR에 대한 지침의 적용 가능성을 비교했다.
+-   **결과:** 연구 결과, 지침은 준수 체크리스트가 아닌 변화의 촉매제로 설계될 때 효과적이지만, 기존 3D 지침과 XR 요구 사항 사이에 근본적인 불일치가 존재하여 구현 장벽과 설계 격차를 발생시킨다는 것을 밝혀냈다. 이는 XR의 고유한 특성을 다루는 새로운 접근성 지침 개발의 필요성을 시사한다.
+-   **키워드:** Accessibility, Extended Reality, Guidelines, Practitioners, Evaluation
 
-**다음 주를 위한 시사점은** 박사님의 DeepSDF, 가우시안 스플래팅, LoRA 연구를 이러한 지원사업 및 공모전 기회와 연결하여 실제 프로젝트로 구체화하고, AI 에이전트 기술이 예술 창작 과정에 어떻게 통합될 수 있을지 탐색하는 것입니다. 또한, 서울대학교와 같은 선도 기관의 채용 동향을 주시하며 학문적 발전 방향을 가늠해볼 필요가 있습니다.
+### 링크
 
----
+- 원문: http://arxiv.org/abs/2602.17939v1
 
-## 1. 연구 동향 — 논문 & 커뮤니티
-
-### 이번 주의 논문
-
-#### 이번 주의 논문: AI 기반 스토리보드 3D 장면 생성
-**원제**: AI-powered storyboard to 3D scene generation
-**저자**: Varacchi Tyler; Polyak Emil | **출처**: crossref
-**관련도**: ★★★★★
-
-**연구 배경 & 동기**
-애니메이션 및 게임 개발에서 손으로 그린 스토리보드는 서사 개념을 빠르게 시각화하고 비평하는 데 필수적입니다. 그러나 이러한 2D 스케치를 3D 장면으로 변환하는 과정은 카메라 배치, 객체 위치 지정, 깊이 인식을 위한 상당한 수동 작업을 요구합니다. 기존 연구는 텍스트 기반 시나리오를 3D 장면으로 변환하는 데 초점을 맞췄으나, 시각적 스토리보드 스케치를 프로덕션 에셋 라이브러리를 활용하여 효율적으로 3D 레이아웃으로 변환하는 데는 한계가 있었습니다. 본 연구는 이러한 수동 작업의 비효율성을 해결하고 2D 스토리보드를 3D 장면으로 자동 변환하는 시스템의 필요성에서 출발합니다.
-
-**핵심 방법론**
-본 논문은 손으로 그린 스토리보드 패널을 완전히 블록아웃된 3D 장면으로 자동 변환하는 언리얼 엔진 5.6 플러그인인 StoryboardTo3D를 제안합니다. 이 플러그인은 ChatGPT-4o, LLaVA-13B, Claude Sonnet 4.5 Extended Thinking과 같은 대규모 언어/시각 모델을 활용하여 스토리보드의 시각적 요소를 분석합니다. 특히, AI의 정확한 공간 인식을 돕기 위해 7개의 시점(스카우트 카메라를 6개 각도로 재배치 후 캡처 + 히어로 카메라 1개)을 순차적으로 사용하는 다중 각도 캡처 시스템을 구현하여 공간적 맥락을 제공합니다. 이를 통해 AI 피드백 루프를 통한 반복적인 위치 조정으로 객체 배치를 점진적으로 개선하며, 디자인을 통한 연구(Research Through Design) 방법론을 채택하여 개발을 진행했습니다.
-
-**주요 결과**
-초록에 구체적인 정량적/정성적 결과가 상세히 제시되지는 않았지만, 본 연구는 손으로 그린 스토리보드 패널을 언리얼 엔진 내에서 완전히 블록아웃된 3D 장면으로 자동 변환하는 시스템을 성공적으로 구현했습니다. 연구 방법론은 디자인을 통한 연구(Research Through Design)와 정량적 성능 분석 및 정성적 평가를 결합하여 개발의 진행 상황과 시스템의 유효성을 검증했음을 시사합니다. 이를 통해 기존의 수동 작업에 비해 3D 장면 구성 시간을 크게 단축하고 효율성을 높였을 것으로 예상됩니다.
-
-**성하님 연구와의 접점**
-성하님의 DeepSDF 3D 생성 연구와 관련하여, 본 논문에서 AI가 배치하는 3D 객체 라이브러리에 DeepSDF로 생성된 고품질의 독창적인 3D 에셋을 통합하여 활용할 수 있습니다. 이는 단순히 기존 에셋을 배치하는 것을 넘어, 스토리보드의 특정 요구사항에 맞춰 동적으로 생성된 객체로 장면을 구성하는 확장 가능성을 제시합니다. 또한, 가우시안 스플래팅 미디어아트 연구와는 본 논문에서 생성된 3D 장면을 가우시안 스플래팅 기술로 렌더링하여 실시간으로 다양한 시점에서 탐색하거나, 독특한 미디어아트 작품으로 재해석하는 접점을 찾을 수 있습니다. LoRA 기반 입체 조형 연구는 본 논문의 AI 모델(ChatGPT-4o, LLaVA 등)이 특정 미디어아트 스타일이나 조형적 특성을 가진 에셋 배치에 더 잘 적응하도록 파인튜닝하는 데 적용될 수 있으며, 이를 통해 AI가 생성하는 3D 장면의 예술적 표현력을 높일 수 있을 것입니다.
-
-**실무 활용 아이디어**
-본 논문의 방법론은 성하님의 미디어아트 작업에서 초기 아이디어를 3D 공간에 빠르게 구현하는 데 혁신적으로 활용될 수 있습니다. 예를 들어, 손으로 그린 스토리보드 스케치를 기반으로 AI가 즉시 3D 장면을 구성하고, 여기에 DeepSDF로 생성된 독창적인 조형물이나 LoRA로 스타일링된 에셋을 배치하여 미디어아트 설치물의 초기 시안을 신속하게 제작할 수 있습니다. 또한, 가우시안 스플래팅을 통해 이러한 AI 생성 3D 장면을 실시간으로 렌더링하고 탐색함으로써, 작가의 창의적인 구상을 더욱 효율적으로 시각화하고 반복적인 실험을 가능하게 할 것입니다.
-
-**한계점 & 향후 전망**
-본 논문의 한계점으로는 초록에서 구체적인 정량적 성능 지표나 AI의 스토리보드 해석 정확도에 대한 상세한 논의가 부족하다는 점을 들 수 있습니다. 또한, AI가 복잡한 예술적 의도나 미묘한 감정적 뉘앙스를 얼마나 정확하게 3D 공간에 반영할 수 있을지에 대한 추가적인 검증이 필요할 것입니다. 향후 연구에서는 AI의 시각적 이해도를 더욱 고도화하여 추상적이거나 비유적인 스토리보드 표현까지 해석하고, 단순한 블록아웃을 넘어 텍스처, 조명, 애니메이션까지 자동화하는 방향으로 발전할 수 있을 것입니다. 나아가, 사용자 맞춤형 에셋 라이브러리 연동 및 실시간 피드백 시스템 강화를 통해 창작자의 개입 없이도 더욱 풍부하고 완성도 높은 3D 장면을 생성하는 데 기여할 것으로 기대됩니다.
-
-### 이번 주 주목할 논문 (간략)
-
-1. **Fine-tuning human for LLM projects**
-   - Guha Rehan | crossref | ☆☆☆☆☆
-   - https://doi.org/10.31219/osf.io/9js3b
-
-2. **DeepSeek in Action**
-   - Dai Jing | crossref | ☆☆☆☆☆
-   - https://doi.org/10.1201/9781003674702
-
-3. **Federated Sketching LoRA: A Flexible Framework for Heterogeneous Collaborative Fine-Tuning of LLMs**
-   - Wenzhi Fang; Dong-Jun Han; Liangqi Yuan; Seyyedali Hosseinal | arxiv | ☆☆☆☆☆
-   - http://arxiv.org/abs/2501.19389v3
-
-4. **Topic Modeling with Fine-tuning LLMs and Bag of Sentences**
-   - Johannes Schneider | arxiv | ☆☆☆☆☆
-   - http://arxiv.org/abs/2408.03099v2
-
-5. **Evaluating Fine-Tuning Efficiency of Human-Inspired Learning Strategies in Medical Question Answering**
-   - Yushi Yang; Andrew M. Bean; Robert McCraith; Adam Mahdi | arxiv | ☆☆☆☆☆
-   - http://arxiv.org/abs/2408.07888v2
-
-6. **Securing Inter-Agent Communication: A Framework for Trusted and Secure AI-to-AI Collaboration**
-   - Panchumarthi Sritej; Sakamuri Divya | crossref | ☆☆☆☆☆
-   - https://doi.org/10.36227/techrxiv.175321895.56143977/v1
-
-7. **Enterprise-Ready Web Automation: A Framework for Democratizing the AI Agent**
-   - Adke Gaurav; Divekar Ameya | crossref | ☆☆☆☆☆
-   - https://doi.org/10.5220/0014472900004052
-
-
-
-
-### 주간 AI 트렌드 분석
-
-## AI 업계 주간 트렌드 분석 (2026년 3월 3주차)
-
-### 핫 토픽
-
-*   **AI 에이전트 및 자동화의 부상:** 이번 주 시그널에서 가장 두드러진 주제는 AI 에이전트의 확산과 이를 통한 광범위한 자동화입니다. 오픈소스 코딩 에이전트(OpenCode, HN engagement 1.00)부터 웹사이트 구축 및 관리(WordPress.com), 데스크톱 자동화(Manus AI Agent), 심지어 디지털 마케팅 및 투자 플랫폼에 이르기까지, AI가 자율적으로 특정 작업을 수행하며 인간의 개입을 최소화하려는 움직임이 활발합니다. 이는 생산성 향상과 새로운 비즈니스 모델 창출에 대한 기대를 반영합니다.
-*   **온디바이스 AI 및 오프라인 기능 강화:** 클라우드나 API 키 없이 완전히 오프라인에서 작동하는 AI Rust 튜터 사례는 온디바이스 AI의 중요성이 커지고 있음을 시사합니다. 이는 개인 정보 보호, 낮은 지연 시간, 그리고 인터넷 연결 없이도 AI 기능을 활용하려는 요구가 증가하고 있음을 반영하며, 엣지 컴퓨팅의 발전과도 궤를 같이 합니다.
-*   **AR/XR/VR (몰입형 기술)의 지속적인 관심:** 비록 구체적인 시그널 목록에는 상세 내용이 없지만, 키워드 빈도에서 AR(18), XR(10), VR(5)이 매우 높게 나타난 점은 몰입형 기술이 AI 산업 전반의 주요 관심사 중 하나임을 간접적으로 보여줍니다. 이는 AI가 몰입형 경험을 강화하고 새로운 인터랙션 방식을 제공하는 핵심 기술로 인식되고 있음을 시사합니다.
-
-### 새 도구 & 모델 출시
-
-*   **OpenCode:** 오픈소스 AI 코딩 에이전트가 출시되어 개발자들이 코딩 작업을 자동화하고 효율화할 수 있도록 돕습니다. (HN engagement 1.00)
-*   **Claude Code skills for Godot:** Claude가 Godot 게임 개발을 위한 코드 생성 기능을 선보여 게임 개발 과정을 지원합니다. (HN engagement 1.00)
-*   **Manus AI Agent:** 데스크톱을 자동화 시스템으로 전환하는 AI 에이전트가 조용히 출시되었습니다.
-*   **WordPress.com AI Agents:** WordPress.com이 AI 에이전트를 활용하여 웹사이트 구축 및 관리를 자동화하는 기능을 도입했습니다.
-*   **오프라인 AI Rust 튜터:** 클라우드 연결 없이 기기에서 직접 실행되는 AI Rust 튜터가 개발되었습니다.
-
-### 플랫폼 업데이트
-
-*   주요 LLM 플랫폼(ChatGPT, Gemini, Claude 등) 자체의 대규모 업데이트 소식은 이번 주 시그널 목록에서 명확히 드러나지 않았습니다. 다만, **WordPress.com**이 AI 에이전트를 도입하여 웹사이트 구축 및 관리 기능을 강화한 것이 주목할 만한 플랫폼 차원의 변화로 볼 수 있습니다.
-
-### 주목할 오픈소스 / GitHub 프로젝트
-
-*   **OpenCode:** AI 코딩 에이전트로서 높은 참여도를 보이며 오픈소스 커뮤니티에서 큰 주목을 받았습니다. (HN engagement 1.00)
-
-### 업계 동향 한줄평
-
-AI는 이제 단순한 도구를 넘어 자율적인 에이전트로서 다양한 분야의 자동화를 주도하며, 온디바이스 실행을 통해 효율성과 개인 정보 보호를 동시에 추구하고 있으나, 그 영향에 대한 비판적 시각 또한 공존합니다.
-
-### 주간 수치
-
-| 항목 | 수집 | 비고 |
-|------|------|------|
-| 학술 논문 | 130건 | 1편 심층 리뷰 + 7편 간략 소개 |
-| 커뮤니티 시그널 | 80건 | Reddit/HN/Lobsters/News |
-| 주요 키워드 | AR(74) | XR(16) | agent(14) | fine-tuning(11) | diffusion(9) | image generation(8) | video generation(7) | multimodal(6) | LLM(5) | VR(5) | |
+![thumbnail](/static/browse/0.3.4/images/arxiv-logo-fb.png)
 
 ---
 
-## 2. 교수 임용 공고
 
+## AI 실감미디어 콘텐츠 주간 다이제스트
+
+안녕하세요, 박성하 박사과정님.
+
+2026년 12주차(3/16~3/22) 'AI 실감미디어 콘텐츠' 주간 다이제스트를 보내드립니다. 이번 주에는 박사과정님의 DeepSDF 3D 생성, 가우시안 스플래팅 미디어아트, LoRA 기반 입체 조형 연구와 밀접하게 관련된 3D 생성, NeRF, LoRA 기술 동향 및 AI와 조형 예술의 융합에 대한 흥미로운 시그널들이 다수 포착되었습니다. 특히 AI를 활용한 조형물 생성 연구와 LoRA의 효율적인 미세조정 기법 확장은 박사과정님의 연구에 중요한 통찰을 제공할 것으로 기대됩니다.
+
+---
+
+## 📌 이번 주 핵심 이슈
+
+**AI 기반 3D 콘텐츠 생성 기술의 고도화:** 이번 주에는 '3D Scene Generation: A Survey'와 'AI-powered storyboard to 3D scene generation' 등 AI를 활용한 3D 환경 및 장면 생성 기술에 대한 연구가 활발히 발표되었습니다. 특히 NeRF 기반 객체 분할 및 의미론적 분해(SSDNeRF)는 복잡한 3D
+
+## 📢 지원사업 & 공모
+
+- **대구 수성미래교육재단, 고교학점제 지원사업 3D 착시 미술·미디어 아트 교육 운영 - 대구일보**: 대구일보  ★★★☆☆ [상세](https://news.google.com/rss/articles/CBMiaEFVX3lxTE5JOVFLSGRUYVFLVWZpalk5RHZtSEoxcHd5dk1HREpsUTlxUGp4b2FXTzkzdGZaS3JYcG9BUVpFV0IySHdzSmMtS3d2Z2hzMUh0LWVKU3hlb05idDB2YVlSbEU2UWhnMHhO?oc=5)
+- **AI 작품 가능, 게임학회·넥슨 대학생 디지털아트 공모 - 게임메카**: 게임메카  ★★☆☆☆ [상세](https://news.google.com/rss/articles/CBMiWEFVX3lxTE0xSXRvWE0waE5mbGdNZThQNnU5eWdwOFNFaG1DMVFoZmdjcElvenJTNmtOWmR3Q3Y2S0s2MkhQWE9vYWk4VXVrZVdBVWlfLW5uRlNEb0xlNFnSAVtBVV95cUxOa0RaN3dpNzdrU2pHSzZ0LXdYSElIbGd1S3VtdmVTWjN4WHBzMmdsZ3pVbEZwaDlhNVZqclVPVk9pM0dDaERQUk1MNVFhUmw5cm5BS1lzSnIxd24w?oc=5)
+- **생성형 AI 기반 가상융합 콘텐츠 제작 전문인력 양성 교육 운영기관 모집공고**: 정보통신산업진흥원  ★★☆☆☆ [상세](https://www.nipa.kr/home/2-2/16564)
+- **「2026년 생성형AI 기반 가상융합 콘텐츠 제작 전문인력 양성」 교육 운영기관 모집공고**: 과학기술정보통신부  ★★☆☆☆ [상세](https://www.msit.go.kr/bbs/view.do?sCode=user&mId=311&mPid=121&bbsSeqNo=100&nttSeqNo=3186567)
+- **김포대 게임콘텐츠과 재학생들, 2025 ‘전국 대학생 디지털아트 공모전’ 수상 - 교수신문**: 교수신문  ★★☆☆☆ [상세](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBETE1rSS11aHh2RDB1LVZ6Q3Zjb2JScHVqbm1mU3RUSTh3dnZndFF5RHpzWFM0N1hWeW9pZ0sycHlOcnNXcVhqOVZTNFhVSFVaWDBkRS01cFNDTXNld0h2Y2JsNC1nQkE?oc=5)
+- **AI 미디어아트 영상 제작 지원…수원시미디어센터 참여자 공모 - 인천일보**: 인천일보  ★★☆☆☆ [상세](https://news.google.com/rss/articles/CBMicEFVX3lxTFA0Mm8xMjlNWFJkYWd1S0N5czhNYl96UG5ybWloSlhJd3l6dWFvZ29OYXVTYUFfdzNKZXFobXlQcXBkaHMzejZCeWNpWEhuZXBfUVNKdXJpTzNOdndMV1hYR1J3VjN0NlhnQlNyYkhHOGQ?oc=5)
+- **AI 미디어아트 영상 제작 지원…수원시미디어센터 참여자 공모 - 인천일보**: 인천일보  ★★☆☆☆ [상세](https://news.google.com/rss/articles/CBMicEFVX3lxTFA0Mm8xMjlNWFJkYWd1S0N5czhNYl96UG5ybWloSlhJd3l6dWFvZ29OYXVTYUFfdzNKZXFobXlQcXBkaHMzejZCeWNpWEhuZXBfUVNKdXJpTzNOdndMV1hYR1J3VjN0NlhnQlNyYkhHOGQ?oc=5)
+- **김포대 게임콘텐츠과 재학생들, 2025 ‘전국 대학생 디지털아트 공모전’ 수상 - 교수신문**: 교수신문  ★★☆☆☆ [상세](https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBETE1rSS11aHh2RDB1LVZ6Q3Zjb2JScHVqbm1mU3RUSTh3dnZndFF5RHpzWFM0N1hWeW9pZ0sycHlOcnNXcVhqOVZTNFhVSFVaWDBkRS01cFNDTXNld0h2Y2JsNC1nQkE?oc=5)
+- **2025 한국게임학회·넥슨 '전국 대학생 디지털아트 공모전' 개최 - 디지털비즈온**: 디지털비즈온  ★★☆☆☆ [상세](https://news.google.com/rss/articles/CBMicEFVX3lxTE1zZTJnbHk3d2xKb21SSVF3cXZ2RnNiSHhPeTdkNFNhZ1pWWlpUMWlUcjA4YzRjNElvOXVFUDlJSEVvbEZCT3JZeExSMHUtMW5lWHlSaC1COHZ4Qm9YcWJ0cTgtdnItSWxWU1k0aW1yYXTSAXRBVV95cUxQdDFrZ2tiazd1d1otbHJXN0ZfRHREMkd1WXJhX1F1bVFya3RWM0ctOE5HS011S0tnMGctZlVPS2ktbDRld0t6YmlhQjJfd0V2OEFrNlROTDhLdDlaUkRrbjRySDVyR3g0YjYyaVYxV3owVjFaMg?oc=5)
+- **넥슨·게임학회, 전국 대학생 디지털아트 공모전 개최 - kmjournal.net**: kmjournal.net  ★★☆☆☆ [상세](https://news.google.com/rss/articles/CBMiakFVX3lxTE1vc0JZa0FtWmszd2VrQlVpSFluNHZycHpFU1lhVFMxSnhIMGY1V25GSmxTdWtKVlV5VC04aVkxQllUY2NnWm91NTF6el9ZTWlzMkgxcE1iaFVzS0NTUzFwYzVOamc0bUxpOEE?oc=5)
+- **게임학회, 넥슨과 전국 대학생 디지털아트 공모전 개최 - M이코노미뉴스**: M이코노미뉴스  ★★☆☆☆ [상세](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE10eDNORlJiMFFGLU4zb3BuWFVlenRmcGNOMFBuSnV3YXR2ZzRCWGV1eG9JN3FTRmhkZ2RjZ3I2UEE1Z1hPcDRrZnZrV3JudWh0bHgyejFFY3N5cUo2MHdlZm16dHNjRmM?oc=5)
+- **2026년 경기인디시네마 기획전 운영관 모집 공고**: 경기콘텐츠진흥원  ★★☆☆☆ [상세](https://www.gcon.or.kr/gcon/business/gconNotice/view.do?pbancSrnm=11131&menuNo=200061&pageIndex=1)
+- **2026 플레이엑스포(PlayX4) B2B 협력 파트너십 모집공고**: 경기콘텐츠진흥원  ★★☆☆☆ [상세](https://www.gcon.or.kr/gcon/business/gconNotice/view.do?pbancSrnm=11130&menuNo=200061&pageIndex=1)
+- **2026 남부권역 초기성장 스케일업 패키지 지원기업 모집 공고**: 경기콘텐츠진흥원  ★★☆☆☆ [상세](https://www.gcon.or.kr/gcon/business/gconNotice/view.do?pbancSrnm=11123&menuNo=200061&pageIndex=1)
+- **2026 경기인디시네마 배급지원 모집 공고**: 경기콘텐츠진흥원  ★★☆☆☆ [상세](https://www.gcon.or.kr/gcon/business/gconNotice/view.do?pbancSrnm=11118&menuNo=200061&pageIndex=1)
 
 ### ⏰ 마감 임박 (D-14 이내)
-- **서울대학교** 디자인학부 — D-1, 전임교원
-- **서울디지털대학교** 모집전공 — D-7, 전임교원
 
-> 전체 진행 중: 8건 (정년 0, 비전임 0, 강사 0)
-
----
-
-## 3. 지원사업 & 공모
-
-### 이번 주 신규 (47건)
-| 사업명 | 기관 | 마감 | 적합도 |
-|--------|------|------|--------|
-| AI 미디어아트 영상 제작 지원…수원시미디어센터 참여자 공모 - 인천일보 | 인천일보 |  | ★★☆☆☆ |
-| 김포대 게임콘텐츠과 재학생들, 2025 ‘전국 대학생 디지털아트 공모전’ | 교수신문 |  | ★★☆☆☆ |
-| 2026년 KoVAC 실감콘텐츠 인프라 지원사업 공고 | 정보통신산업진흥원 |  | ★★☆☆☆ |
-| 2025 한국게임학회·넥슨 '전국 대학생 디지털아트 공모전' 개최 - 디 | 디지털비즈온 |  | ★★☆☆☆ |
-| 김포대, ‘2025 전국 대학생 디지털아트 공모전’ 넥슨상·입선 쾌거 - | 이뉴스투데이 |  | ★★☆☆☆ |
-| 2026년 한국문화예술위원회 예비예술인 현장발표지원사업: "누구에게나 이 | 한국문화예술위원회 |  | ★☆☆☆☆ |
-| 2026년 지역전시 활성화사업 <유형① 미술콘텐츠-지역 전시공간 매칭 지 | 예술경영지원센터 | D-14 | ★☆☆☆☆ |
-| 김포문화재단, 올해 김포예술활동지원사업 시각예술분야 8천만 원 지원 -  | 중부데일리 |  | ★☆☆☆☆ |
-| 2026년 예비창업패키지 공고, 3월 24일까지 뭘할까 - 브런치 | 브런치 |  | ★☆☆☆☆ |
-| AI 콘텐츠 산업 위해 198억 원 투입, 콘진원 2026년 인공지능 콘 | 보드나라 |  | ★☆☆☆☆ |
-| 2026년 경기인디시네마 조각투자 모집 공고 | 경기콘텐츠진흥원 |  | ★☆☆☆☆ |
-| 2026 콘텐츠 오픈이노베이션 지원사업 스타트업 모집 공고 | 한국콘텐츠진흥원 | D-16 | ☆☆☆☆☆ |
-| 2026년 인공지능 콘텐츠 제작지원(협력형) 수행기업 모집 공고 | 한국콘텐츠진흥원 | D-10 | ☆☆☆☆☆ |
-| 2026년 문화체육관광 연구개발사업 신규과제(스타트업 혁신성장) 공고 | 한국콘텐츠진흥원 | D-28 | ☆☆☆☆☆ |
-| 2026년「AI 통합 바우처 지원사업(AI바우처 지원사업)」모집 수정공고 | 정보통신산업진흥원 |  | ☆☆☆☆☆ |
-
-### ⏰ 마감 임박 (D-14 이내)
 - ⏰ **2026 콘텐츠도쿄(CONTENT TOKYO) 한국공동관 참가기업 모집** — 한국콘텐츠진흥원, D-3
-- ⏰ **2026년도 디지털 혁신기업 글로벌 성장 바우처 지원사업「Solution** — 정보통신산업진흥원, D-4
-- ⏰ **2026년 대표공연 콘텐츠 지역유통 지원사업 공모 지원대상 공연작품 목록** — 예술경영지원센터, D-7
-- ⏰ **2026년「AI 통합 바우처 지원사업(AI바우처 지원사업)」모집 수정공고** — 정보통신산업진흥원, D-7
+- ⏰ **2026년도 디지털 혁신기업 글로벌 성장 바우처 지원사업「Solution 바우처 지원과제」** — 정보통신산업진흥원, D-4
+- ⏰ **2026년 대표공연 콘텐츠 지역유통 지원사업 공모 지원대상 공연작품 목록 변경 공지(5차)** — 예술경영지원센터, D-7
+- ⏰ **2026년「AI 통합 바우처 지원사업(AI바우처 지원사업)」모집 수정공고 AI바우처 지원** — 정보통신산업진흥원, D-7
 - ⏰ **<2026 콘텐츠 스타트업 해외마켓> 참가기업 모집 공고** — 한국콘텐츠진흥원, D-7
 - ⏰ **2026년 인공지능 콘텐츠 제작지원(협력형) 수행기업 모집 공고** — 한국콘텐츠진흥원, D-10
 - ⏰ **2026 애니메이션 부트캠프 참가기업 모집** — 한국콘텐츠진흥원, D-11
-- ⏰ **2026 독일 슈투트가르트 국제 애니메이션 영화제(ITFS) 참가기업(참** — 한국콘텐츠진흥원, D-13
-- ⏰ **2026년 지역전시 활성화사업 <유형① 미술콘텐츠-지역 전시공간 매칭 지** — 예술경영지원센터, D-14
+- ⏰ **2026 독일 슈투트가르트 국제 애니메이션 영화제(ITFS) 참가기업(참관단) 모집 공고** — 한국콘텐츠진흥원, D-13
+- ⏰ **2026년 지역전시 활성화사업 <유형① 미술콘텐츠-지역 전시공간 매칭 지원> 전시공간 모집** — 예술경영지원센터, D-14
 - ⏰ **2026 콘텐츠 바르샤바 한국공동관 및 쇼케이스 참가기업 모집 공고** — 한국콘텐츠진흥원, D-14
 
 > 전체 진행 중: 183건
 
----
+## 📋 교수 임용 공고
 
-## 4. 학술계 동향
 
-## 이번 주 학술계 동향 요약: 디지털 대학의 미래 지향적 인재 확보 전략과 융합 예술 기술 분야의 부상
+### ⏰ 마감 임박 (D-14 이내)
 
-이번 주 학술계 동향은 서울디지털대학교의 2026학년도 하반기 전임교원 공개채용 공고를 통해 디지털 교육 환경의 변화와 융합 학문의 중요성이 부각되고 있음을 보여줍니다. 비록 제공된 기사 내용에 구체적인 학과명과 채용 규모가 명시되어 있지 않아 정확한 숫자를 제시하기는 어렵지만, '서울디지털대학교'라는 기관의 특성과 '2026학년도 하반기'라는 채용 시점을 통해 미래 교육 수요에 대한 선제적 대응 전략을 유추할 수 있습니다.
+- ⏰ **서울대학교** 디자인학부 — D-1
+- ⏰ **서울디지털대학교** 모집전공 — D-7
 
-서울디지털대학교와 같은 원격 교육 중심의 디지털 대학이 2026학년도라는 비교적 먼 미래를 내다보고 전임교원 채용을 진행하는 것은, 급변하는 기술 환경에 발맞춰 교육 콘텐츠와 연구 역량을 강화하려는 전략적 움직임으로 해석됩니다. 특히 미술, 미디어아트, AI, 조소, 실감미디어 등 본 분석에서 우선순위를 둔 분야들을 고려할 때, 서울디지털대학교는 가상현실(VR), 증강현실(AR), 메타버스, 인공지능(AI) 기반의 디지털 콘텐츠 제작 및 실감형 미디어 교육 분야에서 전문성을 갖춘 교수진을 확보하려 할 것으로 예상됩니다. 예를 들어, 'AI융합디자인학과' 또는 '실감미디어콘텐츠학과', '디지털아트테크놀로지전공' 등에서 수 명의 전임교원을 채용할 가능성이 높으며, 이는 전통적인 예술 분야에 디지털 기술을 접목하는 융합 인재 양성에 주력하겠다는 의지를 반영합니다.
-
-이러한 동향은 고등교육 정책 측면에서 몇 가지 중요한 시사점을 던집니다. 첫째, 디지털 대학들이 미래 사회의 핵심 역량으로 부상하는 AI, 실감미디어 기술과 예술의 융합 분야에 대한 투자를 확대하고 있음을 보여줍니다. 이는 온라인 교육 환경에서 차별화된 학습 경험을 제공하고, 디지털 전환 시대에 필요한 창의적 인재를 양성하기 위한 필수적인 변화입니다. 둘째, 2026년이라는 시점은 대학들이 단기적인 인력 수급을 넘어 장기적인 관점에서 학과 개편 및 교육 과정 혁신을 준비하고 있음을 의미합니다. 이는 교육부가 추진하는 첨단 분야 인재 양성 정책과도 궤를 같이하며, 대학들이 자율적으로 미래 성장 동력을 발굴하는 사례로 볼 수 있습니다.
-
-결론적으로, 서울디지털대학교의 2026학년도 하반기 전임교원 채용 공고는 구체적인 내용 부재에도 불구하고, 디지털 고등교육 기관이 AI, 미디어아트, 실감미디어 등 융합 예술 기술 분야의 전문 인력 확보를 통해 미래 교육 경쟁력을 강화하려는 선제적 노력을 보여주는 중요한 지표입니다. 이는 향후 고등교육 전반에 걸쳐 디지털 전환과 융합 학문 육성이 더욱 가속화될 것임을 예고하며, 관련 정책 수립에 있어 이러한 변화의 흐름을 적극적으로 반영해야 할 필요성을 강조합니다.
-
-**관련 기사 URL:** https://www.kyosu.net/news/articleView.html?idxno=201196
+> 전체 진행 중: 8건
 
 ---
 
-## 5. 다음 주 체크리스트
+<details>
+<summary>실행 정보</summary>
 
-- [ ] 서울대학교 디자인학부 공고 마감 (2026-03-24, D-1)
-- [ ] 서울디지털대학교 모집전공 공고 마감 (2026-03-30, D-7)
-- [ ] 2026년 대표공연 콘텐츠 지역유통 지원사업 공모 지원대상 공연작품 목록 마감 (2026-03-30, D-7)
-- [ ] 2026년「AI 통합 바우처 지원사업(AI바우처 지원사업)」모집 수정공고 마감 (2026-03-30, D-7)
-- [ ] 2026년도 디지털 혁신기업 글로벌 성장 바우처 지원사업「Solution 마감 (2026-03-27, D-4)
-- [ ] <2026 콘텐츠 스타트업 해외마켓> 참가기업 모집 공고 마감 (2026-03-30, D-7)
-- [ ] 2026년 인공지능 콘텐츠 제작지원(협력형) 수행기업 모집 공고 마감 (2026-04-02, D-10)
-- [ ] 2026 콘텐츠도쿄(CONTENT TOKYO) 한국공동관 참가기업 모집 마감 (2026-03-26, D-3)
-- [ ] 논문 읽기 추천: AI-powered storyboard to 3D scene generation
+- 기간: 3/16~3/22
+- 생성: 2026-03-22T15:16:10+09:00
+- Provider: gemini
+- Model: gemini-2.5-flash
+- 논문: 130건 수집, 1편 선정
+- 시그널: 80건
+- 임용 공고: 0건 (전체 8건 활성)
+- 지원사업: 47건 (전체 183건 활성)
+- 동향 기사: 1건
 
----
-
-*이 리포트는 Weekly Digest 에이전트가 자동 생성했습니다.*
-*Paper Agent + Professor Agent 통합 시스템 | 2026-03-22 13:06*
+</details>
