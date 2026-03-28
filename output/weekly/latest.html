@@ -10,12 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
         :root{
-          --bg:#f7f8fa;--bg-soft:#ffffff;--panel:#ffffff;--panel-2:#fafbfc;--text:#101828;
-          --muted:#667085;--line:rgba(16,24,40,.08);--shadow:0 18px 46px rgba(15,23,42,.06);
+          --bg:#ffffff;--bg-soft:#ffffff;--panel:#ffffff;--panel-2:#ffffff;--text:#101828;
+          --muted:#667085;--line:rgba(16,24,40,.07);--shadow:0 12px 30px rgba(15,23,42,.05);
         }
         *{box-sizing:border-box} html{scroll-behavior:smooth}
-        body{margin:0;color:var(--text);background:
-          linear-gradient(180deg,#ffffff 0%,#fbfcfe 28%,#f7f8fa 100%);
+        body{margin:0;color:var(--text);background:#fff;
           font-family:"Plus Jakarta Sans","Noto Sans KR",system-ui,sans-serif;line-height:1.7}
         a{color:inherit;text-decoration:none}
         img{display:block;max-width:100%}
@@ -28,8 +27,8 @@
           line-height:.94;letter-spacing:-.055em;margin:18px 0 14px;max-width:10ch}
         .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
         .hero-card,.summary-card,.archive-card,.story-card,.empty-card{
-          background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,255,255,.94));
-          border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);backdrop-filter:blur(10px)
+          background:#fff;
+          border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)
         }
         .hero-card{padding:34px}
         .hero-copy{font-size:clamp(20px,2.15vw,27px);max-width:29ch;color:#101828;font-weight:600;letter-spacing:-.025em}
@@ -59,7 +58,7 @@
         .story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
         .story-card{overflow:hidden;display:flex;flex-direction:column}
         .story-visual{aspect-ratio:16/10;background:
-          linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%, white),rgba(255,255,255,.78))}
+          linear-gradient(145deg,color-mix(in srgb,var(--accent) 7%, white),#ffffff)}
         .story-visual img{width:100%;height:100%;object-fit:cover}
         .story-body{padding:24px 24px 26px}
         .story-meta{display:flex;flex-wrap:wrap;gap:8px;color:#667085;font-size:13px;margin-bottom:12px}
@@ -74,11 +73,11 @@
         }
         .story-link{background:color-mix(in srgb,var(--accent) 9%, white);border-color:color-mix(in srgb,var(--accent) 24%, rgba(15,23,42,.05))}
         .story-generated{font-size:12px;color:#0f9f6e}
-        .overflow-wrap{margin-top:14px;padding:16px 18px;border:1px dashed rgba(15,23,42,.10);border-radius:20px;color:#475467;background:rgba(255,255,255,.74)}
+        .overflow-wrap{margin-top:14px;padding:16px 18px;border:1px dashed rgba(15,23,42,.10);border-radius:20px;color:#475467;background:#fff}
         .overflow-wrap h3{margin:0 0 10px;font-size:15px;color:#162033}
         .overflow-wrap ul{margin:0;padding-left:18px}
         .empty-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:14px}
-        .empty-card{padding:16px 18px;color:#475467;background:rgba(255,255,255,.84)}
+        .empty-card{padding:16px 18px;color:#475467;background:#fff}
         .empty-card .muted{color:#98a2b3}
         .archive-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
         .archive-card{padding:18px 18px 20px}
@@ -130,8 +129,8 @@
                       <div class="story-body">
                         <div class="story-meta"><span>2026-03-26 | 공식 발표 | Google | update</span></div>
                         <h3 class="story-title">Gemini 3.1 Flash Live: Making audio AI more natural and reliable</h3>
-                        <p>Google은 Gemini 3.1 Flash Live를 선보이며, 음성 모델의 정확도를 높이고 응답 지연 시간을 대폭 단축했습니다. 이는 사용자에게 더욱 유연하고 자연스러운 실시간 대화 경험을 제공합니다.</p>
-                        <p class="story-kicker">엔진 출력표보다, 자주 타는 차에 자동변속기를 달아 놓은 쪽에 더 가깝습니다.</p>
+                        <p>Google가 음성 대화를 더 자연스럽고 빠르게 처리하는 `Gemini 3.1 Flash Live` 업데이트를 내놨습니다. 음성 모델이 빨라지고 덜 어색해질수록, 실시간 통역이나 보이스 인터페이스 같은 현장형 기능의 완성도가 바로 올라갑니다.</p>
+                        <p class="story-kicker">통역기 마이크를 바꿨더니, 대화가 한 박자 덜 끊기는 느낌에 가깝습니다.</p>
                         <div class="story-actions"><a class="story-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-live/" target="_blank" rel="noreferrer">원문 보기</a></div>
                       </div>
                     </article>
@@ -141,8 +140,8 @@
                       <div class="story-body">
                         <div class="story-meta"><span>2026-03-26 | 공식 발표 | Google | update</span></div>
                         <h3 class="story-title">Search Live is expanding globally</h3>
-                        <p>Google은 &#x27;Search Live&#x27; 기능을 통해 AI 모드에서 음성 및 카메라를 활용한 대화형 다중 모드 검색을 전 세계 200개 이상의 국가로 확장했습니다. 이는 사용자들이 텍스트 입력의 제약 없이 말하고 보여주면서 정보를 탐색할 수 있게 함으로써, 검색 경험을 보다 직관적이고 자연스러운 대화 형태로 근본적으로 변화시키는 중요한 전환점을 마련합니다.</p>
-                        <p class="story-kicker">이제 검색은 질문을 받아 적는 비서가 아닌, 눈을 마주하고 대화하는 친구가 되었습니다.</p>
+                        <p>Google은 Search Live 기능을 AI 모드와 연동하여 확장했습니다. 이는 전 세계 200개국 이상에서 음성 및 카메라를 통한 대화형 검색을 지원합니다.</p>
+                        <p class="story-kicker">엔진 출력표보다, 자주 타는 차에 자동변속기를 달아 놓은 쪽에 더 가깝습니다.</p>
                         <div class="story-actions"><a class="story-link" href="https://blog.google/products-and-platforms/products/search/search-live-global-expansion/" target="_blank" rel="noreferrer">원문 보기</a></div>
                       </div>
                     </article>
@@ -164,8 +163,8 @@
                       <div class="story-body">
                         <div class="story-meta"><span>2026-03-17 | 공식 발표 | OpenAI | update</span></div>
                         <h3 class="story-title">Sora 1 Sunset – FAQ</h3>
-                        <p>OpenAI는 2026년 3월 13일부로 미국 내 Sora 1 서비스를 공식 종료하고, 이제 모든 사용자가 Sora 2를 기본 환경으로 이용하게 되었습니다. 기존 Sora 1에서 생성한 콘텐츠는 영구 삭제 전까지 제한된 기간 동안 데이터 내보내기가 가능합니다. 이는 사용자들이 더 이상 두 가지 버전 사이에서 혼란을 겪을 필요 없이, 최신 기술이 집약된 Sora 2의 단일화된 환경에서 더욱 효율적이고 일관된 영상 생성 경험을 할 수 있게 됨을 의미합니다.</p>
-                        <p class="story-kicker">마치 구형 내비게이션 대신 최신 지도와 기능이 통합된 하나의 시스템을 쓰는 것과 같습니다.</p>
+                        <p>2026년 3월 13일부터 OpenAI는 미국 내에서 영상 생성 AI &#x27;Sora 1&#x27;의 서비스를 종료했습니다. 이에 따라 미국 사용자들은 이제 &#x27;Sora 2&#x27;를 기본 환경으로 이용하게 됩니다.</p>
+                        <p class="story-kicker">짧은 티저 한 편보다 편집실 타임라인에 새 레일을 깔아준 셈입니다.</p>
                         <div class="story-actions"><a class="story-link" href="https://help.openai.com/en/articles/20001071-sora-1-sunset-faq" target="_blank" rel="noreferrer">원문 보기</a></div>
                       </div>
                     </article>
@@ -198,8 +197,8 @@
                       <div class="story-body">
                         <div class="story-meta"><span>2026-03-29 | 공식 발표 | Suno | update</span></div>
                         <h3 class="story-title">Introducing Suno Scenes</h3>
-                        <p>Suno는 &#x27;Suno Scenes&#x27;라는 새로운 기능을 선보였습니다. 이제 사용자들이 카메라로 찍은 사진이나 영상에서 곧바로 자신만의 노래를 만들 수 있게 되었습니다.</p>
-                        <p class="story-kicker">멜로디 하나 얻는 수준이 아니라, 세션 파일에 자주 쓰는 악기 체인을 저장한 느낌입니다.</p>
+                        <p>Suno 팀이 새로운 기능 &#x27;Suno Scenes&#x27;를 선보였습니다. 이제 사용자는 카메라로 촬영한 사진이나 비디오를 기반으로 직접 새로운 곡을 만들 수 있습니다.</p>
+                        <p class="story-kicker">이로써 음악 창작 방식이 텍스트나 오디오를 넘어 시각적 경험으로 확장됩니다.</p>
                         <div class="story-actions"><a class="story-link" href="https://suno.com/blog/introducing-suno-scenes" target="_blank" rel="noreferrer">원문 보기</a></div>
                       </div>
                     </article>
